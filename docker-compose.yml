@@ -1,0 +1,18 @@
+version: "3.6"
+
+services:
+  technitium-exporter:
+    image: arivera3483/technitium-exporter
+    container_name: technitium_exporter
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    environment:
+      TECHNITIUM_ADDRESS: http://192.168.0.1
+      TECHNITIUM_PORT: 5380
+      TECHNITIUM_USER: admin
+      TECHNITIUM_PASSWORD: password
+      TECHNITIUM_TOKEN: APIKEY
+      TECHNITIUM_WEBPORT: 8080
+    restart: always
