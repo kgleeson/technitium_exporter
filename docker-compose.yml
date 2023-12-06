@@ -1,0 +1,13 @@
+version: "3.6"
+
+services:
+  technitium-exporter:
+    image: technitium-exporter
+    container_name: technitium_exporter
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    env_file:
+      - .env
+    restart: always
