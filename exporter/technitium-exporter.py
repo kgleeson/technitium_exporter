@@ -11,8 +11,8 @@ from prometheus_client import Gauge, start_http_server
 class Technitium_exporter:
     def __init__(self, url, username, password, token):
         self.api_url = f"{url}/api"
-        self.login_url = f"{self.api_url}/login?user={username}&pass={password}"
-        self.status_url = f"{self.api_url}/getStats?type=lastDay"
+        self.login_url = f"{self.api_url}/user/login?user={username}&pass={password}"
+        self.status_url = f"{self.api_url}/dashboard/stats/get?type=lastDay"
         self.stat_prefix = "technitium"
         self.stats = None
         self.token = token
