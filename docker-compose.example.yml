@@ -2,7 +2,7 @@ version: "3.6"
 
 services:
   technitium-exporter:
-    image: arivera3483/technitium-exporter
+    image: ghcr.io/kgleeson/technitium_exporter:latest
     container_name: technitium_exporter
     expose:
       - 8080
